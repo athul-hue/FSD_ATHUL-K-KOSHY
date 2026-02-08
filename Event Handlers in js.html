@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Event Handlers</title>
+        <style>
+            h1{
+                text-align: center;
+                color: blue;
+            }
+            div{
+                border: 1px solid gray;
+                width: 340px;
+                margin-left: 800px;
+                margin-top:250px;
+                background-color :rgb(83, 239, 182);
+                box-shadow: black;
+               
+            }
+            .user{
+                margin-left: 50px;
+            }
+            .pass{
+                margin-left: 50px;
+            }
+            #password{
+                margin-left: 4px;
+            }
+            button{
+                margin-left: 140px;
+                width: 70px;
+                height: 30px;
+                border-radius: 5px;
+                border: none;
+                font-weight: bold;
+            }
+            button:hover{
+                background-color:rgb(2, 65, 255);
+            
+            }
+            body{
+                background-color: rgb(168, 206, 239);
+            }
+            #result{
+                margin-left: 120px;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Event Handlers in JS</h1><br>
+        <div><br>
+        <label class="user">Username:</label>
+        <input type="text" placeholder="Enter Username" id="username"><br> <br>
+        <label class="pass">Password:</label>
+        <input type="password" placeholder="Enter password" id="password"><br><br>
+        <button onclick="Event()">Login</button>
+        <p id="result"></p>
+        </div>
+        <script>
+            function Event(){
+                //alert("athul")
+                var user = document.getElementById("username").value;
+                var pass = document.getElementById("password").value;
+
+                if(user == "athul9191" && pass == "9191"){
+                    //document.writeln("Login Success!!!");
+                    document.getElementById("result").innerHTML = "Login Success!!!";
+                    result.style.color = "green";
+                }
+                else{
+                    //document.writeln("Login Failed!!!");
+                    document.getElementById("result").innerHTML = "Login Failed!!!";
+                    result.style.color = "red";
+                    
+                }
+            }
+        </script>
+    </body>
+</html>

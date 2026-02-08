@@ -1,0 +1,208 @@
+<html>
+<head>
+    <title>Skyline</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #090e13;
+            padding: 1px;
+        }
+
+        .logo {
+            width: 160px;
+        }
+
+        .center-title {
+            flex: 1;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* VIDEO SECTION */
+        .video-section video {
+            width: 60%;
+            height: 400px;
+            object-fit: cover;
+            margin-left: 300px;
+            margin-bottom:20px;
+        }
+
+        
+        .projects-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-title h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.projects-title p {
+    color: gray;
+}
+.projects {
+    display: flex;
+    justify-content: flex-end;   /* moves images to right */
+    gap: +30px;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.projects img {
+    width: 280px;
+    height:90px;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 120px;
+}
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+.project-card {
+    width: 340px;   /* increased from 260px */
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 230px;   /* increased from 180px */
+    object-fit: cover;
+    border-radius: 1px;
+    margin-bottom: 9px;
+}
+
+
+.project-card audio {
+    width: 100%;
+}
+.description-box {
+    width: 80%;
+    margin: 30px auto 60px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+ p{
+            text-align: center;
+            color: rgb(0, 4, 6);
+ }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <img src="C:\Users\athul\Downloads\syline.png" class="logo">
+
+        <div class="center-title">Skyline</div>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+
+    <!-- VIDEO AFTER NAVBAR -->
+    <div class="video-section">
+        <video src="./257796.mp4" autoplay muted loop controls>
+            
+        </video>
+    </div>
+
+   <!-- PROPERTY IMAGES -->
+
+<div class="projects-title">
+    <h2>FLATS IN KERALA</h2>
+    <p>Exclusive Luxury Apartments and Flats in Kerala Under Budget and at Prime Locations</p>
+<!-- PROJECTS WITH AUDIO -->
+<div class="projects">
+
+    <div class="project-card">
+        <img src="./NVT.webp" onclick="showDescription(1)">
+        <audio controls>
+            <source src="./myshoun-summer-lounge-in-the-city-223397.mp3">
+        </audio>
+    </div>
+
+    <div class="project-card">
+        <img src="./Confident-Serene-Heights.jpg" onclick="showDescription(2)">
+        <audio controls>
+            <source src="./harumachimusic-the-beautiful-room-149445.mp3">
+        </audio>
+    </div>
+
+    <div class="project-card">
+        <img src="./Astro.jpg" onclick="showDescription(3)">
+        <audio controls>
+            <source src="./harumachimusic-palace-garden-386499.mp3">
+        </audio>
+    </div>
+
+    <div class="project-card">
+        <img src="./download (5).jpeg" onclick="showDescription(4)">
+        <audio controls>
+            <source src="./harumachimusic-going-to-bed-slow-calm-guitar-182404.mp3">
+        </audio>
+    </div>
+
+</div>
+
+</div>
+<div id="project-description" class="description-box">
+    Click on a project image to see details.
+</div>
+<script>
+function showDescription(num) {
+    let text = "";
+
+    if (num === 1) {
+        text = "<b>Confident NVT</b><br>Experience refined luxury living at Confident NVT Residences, a landmark high-rise designed for those who appreciate elegance and comfort. These premium apartments offer spacious interiors, panoramic city views, and world-class amenities that elevate everyday living. With modern architecture, thoughtfully planned layouts, and excellent connectivity to major business hubs, Confident NVT is the perfect blend of sophistication and urban convenience..";
+    } 
+    else if (num === 2) {
+        text = "<b>Confident Serene Heights</b><br>Confident Serene Heights is a beautifully crafted residential enclave that combines modern living with peaceful surroundings. Set across expansive land, this project features high-rise towers with abundant natural light, landscaped gardens, and lifestyle amenities designed for families. Every home reflects quality craftsmanship, offering a calm retreat from the city while staying close to essential services and prime locations..";
+    } 
+    else if (num === 3) {
+        text = "<b>Confident Astro</b><br>Confident Astro Villas redefine luxury with contemporary villa-style architecture and premium finishes. Designed for exclusivity, these homes feature open spaces, private balconies, and elegant interiors that create a perfect harmony between nature and modern living. Ideal for those seeking privacy and style, Astro Villas offer a serene environment with smart design and timeless appeal..";
+    } 
+    else if (num === 4) {
+        text = "<b>Confident Towers</b><br>Confident Elite Towers offers a lifestyle of comfort, elegance, and practicality. These thoughtfully designed apartments provide modern amenities, efficient floor plans, and a vibrant community atmosphere. With excellent accessibility, quality construction, and a focus on sustainable living, Elite Towers is an ideal choice for homeowners looking for affordable luxury in a well-connected urban setting.";
+    }
+
+    document.getElementById("project-description").innerHTML = text;
+}
+</script>
+<p class="CopyRight ">© 2026 Confident Group.</p>
+         <p class="p2"> All rights reserved.</p>
+         
+
+</body>
+</html>

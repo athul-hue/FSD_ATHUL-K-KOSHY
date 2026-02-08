@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>Valentine's Week</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("./251ebd3c42cdc7bfbfd05ff41986f6d7.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            padding: 40px;
+            background-image: 300px;
+        }
+
+        marquee {
+            font-size: 22px;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(236, 5, 5);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 360px;
+            margin: 40px auto;
+            box-shadow: 0 10px 25px rgba(247, 6, 6, 0.2);
+            margin-top: 120px;
+        }
+
+        h1 {
+            color: rgb(185, 17, 5);
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 85%;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: rgb(243, 5, 5);
+            color:rgb(30, 7, 7);
+            border: none;
+            border-radius: 1px;
+            
+        }
+
+        button:hover {
+            background-color: cadetblue;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="card">
+    <h1>Valentine's Week Finder</h1>
+
+    <input type="number" id="day" placeholder="Enter Feb date (7–14)">
+    <button onclick="findDay()">Check Day</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function findDay() {
+    let d = parseInt(document.getElementById("day").value);
+    let output = "";
+
+    switch(d) {
+        case 7:
+            output = " Rose Day";
+            break;
+
+        case 8:
+            output = " Propose Day";
+            break;
+
+        case 9:
+            output = " Chocolate Day";
+            break;
+
+        case 10:
+            output = " Teddy Day";
+            break;
+
+        case 11:
+            output = " Promise Day";
+            break;
+
+        case 12:
+            output = " Hug Day";
+            break;
+
+        case 13:
+            output = " Kiss Day";
+            break;
+
+        case 14:
+            output = "Valentine’s Day";
+            break;
+
+        default:
+            output = " Enter a valid date between 7 and 14";
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+</html>
